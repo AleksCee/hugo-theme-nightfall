@@ -40,13 +40,13 @@
         </a>
 
         <div class="postExcerpt">
-          <p>{{ .Summary }}</p>
+          {{ .Summary }}
         </div>
       </div>
     {{ end }}
   </div>
 
   {{ partial "pagination.html" (dict "paginator" $paginator) }}
-  
+
 </div>
 {{ end }}
