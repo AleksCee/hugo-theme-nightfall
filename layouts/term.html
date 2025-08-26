@@ -14,7 +14,6 @@
   </div>
   {{ end }}
 
-  {{/* Posts für diesen Taxonomie-Begriff */}}
   {{ $pages := .Pages }}
   {{ $paginator := .Paginate $pages }}
 
@@ -29,7 +28,6 @@
             <time class="postDate" datetime="{{ $iso }}">{{ .Date | time.Format $layout }}</time>
           </div>
 
-          {{/* Reading Time Regeln wie in deiner list.html */}}
           {{ $showReadingTime := true }}
           {{ if eq .Site.Params.showReadingTime false }}{{ $showReadingTime = false }}{{ end }}
           {{ if eq .Site.Params.readingTime false }}{{ $showReadingTime = false }}{{ end }}

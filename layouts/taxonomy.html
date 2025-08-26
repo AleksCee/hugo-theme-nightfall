@@ -14,7 +14,7 @@
   </div>
   {{ end }}
 
-  {{/* Alphabetisch; alternativ .Data.Terms.ByCount für Häufigkeit */}}
+  {{/* In alphabetical order; use .Data.Terms.ByCount to sort by frequency */}}
   {{ $terms := .Data.Terms.Alphabetical }}
 
   {{ if not $terms }}
