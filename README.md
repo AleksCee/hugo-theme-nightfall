@@ -27,6 +27,21 @@ Import manually:
 1. `git clone https://github.com/LordMathis/hugo-theme-nightfall themes/nightfall`
 2. Add `theme = "nightfall"` in your `hugo.toml`:
 
+## Hugo Theme Update Notice (v0.146.0)
+
+The theme has been adapted for Hugo’s new template system starting with version **0.146.0**.  
+With this theme update, building the site now requires Hugo **>= 0.146.0**.
+
+If you have made manual layout modifications (overrides in your `/layouts` folder), you will need to adjust them:
+
+1. All files that were previously located in `/layouts/_default` must be moved directly into `/layouts`. The `_default` subfolder can be deleted if it is empty.
+2. If you had a `/layouts/_default/_markup` folder, this must also be moved to `/layouts/_markup`.
+3. If you had `partials` or `shortcodes` as subfolders within `/layouts`, they must be renamed to `_partials` and `_shortcodes`.
+4. If there is an `index.html` under `/layouts`, it must be renamed to `home.html`.
+
+For more details, please refer to the Hugo documentation:  
+👉 [Hugo New Template System Overview](https://gohugo.io/templates/new-templatesystem-overview/)
+
 ## Configuration
 
 For full example check `exampleSite/hugo.toml`
@@ -192,7 +207,7 @@ sitedescription = 'Your website description'
 
 You can also add a description to individual posts in you website by adding `description` to the front matter. For example:
 
-```
+```toml
 +++
 title =  'This is the post title'
 draft = false
