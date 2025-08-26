@@ -34,7 +34,7 @@ With this theme update, building the site now requires Hugo **>= 0.146.0**.
 
 If you have made manual layout modifications (overrides in your `/layouts` folder), you will need to adjust them:
 
-1. All files that were previously located in `/layouts/_default` must be moved directly into `/layouts`. The `_default` subfolder can be deleted if it is empty.
+1. All files that were previously located in `/layouts/_default` must be moved directly to `/layouts`. The `_default` subfolder can be deleted if it is empty.
 2. If you had a `/layouts/_default/_markup` folder, this must also be moved to `/layouts/_markup`.
 3. If you had `partials` or `shortcodes` as subfolders within `/layouts`, they must be renamed to `_partials` and `_shortcodes`.
 4. If there is an `index.html` under `/layouts`, it must be renamed to `home.html`.
